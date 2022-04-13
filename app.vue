@@ -76,9 +76,9 @@ body {
   gap: 1em;
   padding: 2em;
   background-color: white;
-  width: 475px;
   border-radius: 4px;
   box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.5);
+  width: clamp(20em, 100vw, 475px);
 }
 
 .image-container {
