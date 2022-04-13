@@ -1,12 +1,13 @@
 export default function Bird4(
   primary = '#7DD866', // green
   secondary = '#D0DB4F', // yellow green
-  outline = '#36662B' // dark green
+  outline = '#36662B', // dark green
+  bg = '#ECFCCB' // green
 ) {
   return `
     <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_3_454)">
-        <rect width="128" height="128" fill="white"/>
+        <rect width="128" height="128" fill="${bg}"/>
         <path d="M145.5 96.8108C145.5 128.076 119.352 153.5 87 153.5C54.6477 153.5 28.5 128.076 28.5 96.8108C28.5 65.5452 54.6477 40.1216 87 40.1216C119.352 40.1216 145.5 65.5452 145.5 96.8108Z" fill="${primary}" stroke="${outline}" stroke-width="3"/>
         <path d="M67.0748 67.0289C67.0748 77.2916 58.4832 85.689 47.7874 85.689C37.0916 85.689 28.5 77.2916 28.5 67.0289C28.5 56.7663 37.0916 48.3689 47.7874 48.3689C58.4832 48.3689 67.0748 56.7663 67.0748 67.0289Z" fill="white" stroke="${outline}" stroke-width="3"/>
         <rect x="1.69794" y="1.2862" width="49.3421" height="20.5496" rx="10.2748" transform="matrix(0.991174 -0.13257 0.140788 0.99004 33.4481 71.4567)" fill="#FFDE31" stroke="#BCA428" stroke-width="3"/>

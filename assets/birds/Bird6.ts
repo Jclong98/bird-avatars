@@ -1,12 +1,13 @@
 export default function Bird6(
   primary = '#F0B51D', // yellow
   secondary = '#D95B00', // dark orange'
-  outline = '#592500' // brown
+  outline = '#592500', // brown
+  bg = '#FFEDD5' // light orange
 ) {
   return `
     <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_7_722)">
-        <rect width="128" height="128" fill="white"/>
+        <rect width="128" height="128" fill="${bg}"/>
         <rect x="1.5" y="61.5" width="125" height="125" rx="62.5" fill="${secondary}" stroke="${outline}" stroke-width="3"/>
         <rect x="20.5" y="20.5" width="87" height="87" rx="43.5" fill="${primary}" stroke="${outline}" stroke-width="3"/>
         <path d="M56.5 60C56.5 70.7046 47.3884 79.5 36 79.5C24.6116 79.5 15.5 70.7046 15.5 60C15.5 49.2954 24.6116 40.5 36 40.5C47.3884 40.5 56.5 49.2954 56.5 60Z" fill="white" stroke="${outline}" stroke-width="3"/>

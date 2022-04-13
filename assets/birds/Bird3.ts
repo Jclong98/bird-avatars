@@ -1,11 +1,12 @@
 export default function Bird3(
   primary = '#BE6DE4', // purple
   secondary = '#974CBA', // dark purple
-  outline = '#601D80' // dark purple
+  outline = '#601D80', // dark purple
+  bg = '#FAE8FF' // light purple
 ) {
   return `
     <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="128" height="128" fill="white"/>
+      <rect width="128" height="128" fill="${bg}"/>
 
       <path fill-rule="evenodd" clip-rule="evenodd" d="M69.0279 77.5199C70.9499 76.4308 73.391 77.1059 74.4801 79.0279L82.7937 93.699C83.3943 94.759 83.5873 96.0018 83.3363 97.1941L81.4142 106.324C80.9591 108.486 78.8377 109.869 76.676 109.414C74.5142 108.959 73.1307 106.838 73.5858 104.676L75.2742 96.6561L67.5199 82.972C66.4308 81.05 67.1059 78.609 69.0279 77.5199Z" fill="#FFDE31" stroke="#BCA428" stroke-width="2" stroke-linecap="round"/>
       

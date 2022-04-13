@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { nanoid } from 'nanoid'
+const letters = 'abcdefghijklmnopqrstuvwxyz'
+const randomLetter = () => {
+  return letters[Math.floor(Math.random() * letters.length)]
+}
+const randomLetters = (length: number) => {
+  return Array.from({ length }, () => randomLetter()).join('')
+}
 
-const imageId = ref(nanoid())
-const imagePath = computed(() => `/api/bird/${imageId.value}`)
+const imageId = ref(randomLetters(3))
+const imagePath = computed(() => `/api/${imageId.value}`)
 const fullImagePath = computed(
-  () => `https://bird-avatars.netlify.app/api/bird/${imageId.value}`
+  () => `https://bird-avatars.netlify.app/api/${imageId.value}`
 )
 </script>
 
@@ -23,31 +29,34 @@ const fullImagePath = computed(
     <Link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </Head>
 
-  <header>
-    <h1>Bird Avatar Generator</h1>
-  </header>
+  <div class="centered">
+    <header>
+      <h1>Bird Avatar Generator</h1>
+    </header>
 
-  <main class="main-card">
-    <div class="image-container">
-      <img :src="imagePath" :alt="`bird-${imageId}`" />
-    </div>
+    <main class="main-card">
+      <div class="image-container">
+        <img :src="imagePath" :alt="`bird-${imageId}`" />
+      </div>
 
-    <form class="controls" @submit.prevent>
-      <input
-      type="text"
-        tabindex="0"
-        @focus="$event.target.select()"
-        :value="fullImagePath"
-      />
-      <button @click="imageId = nanoid()" title="randomize">
-        <span class="icon">🎲</span>
-      </button>
-    </form>
-  </main>
+      <form class="controls" @submit.prevent>
+        <input
+          type="text"
+          tabindex="0"
+          @focus="$event.target.select()"
+          :value="fullImagePath"
+        />
+        <button @click="imageId = randomLetters(3)" title="randomize">
+          <span class="icon">🎲</span>
+        </button>
+      </form>
+    </main>
 
-  <footer>
-    Created by <a href="https://github.com/jclong98/bird-avatars">Jacob Long</a>
-  </footer>
+    <footer>
+      Created by
+      <a href="https://github.com/jclong98/bird-avatars">Jacob Long</a>
+    </footer>
+  </div>
 </template>
 
 <style>
@@ -62,10 +71,15 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100vh;
-  background-color: hsl(240, 100%, 96%);
-  display: grid;
-  place-items: center;
   font-family: cursive;
+  background-color: hsl(214, 95%, 93%);
+  color: hsl(214, 95%, 20%);
+}
+
+.centered {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -75,10 +89,11 @@ body {
   align-items: center;
   gap: 1em;
   padding: 2em;
+  margin: 1em;
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.5);
-  width: clamp(20em, 100vw, 475px);
+  flex: 1;
 }
 
 .image-container {
@@ -88,6 +103,14 @@ body {
   overflow: hidden;
   border: 1px solid #ccc;
   box-shadow: inset 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    height: 300px;
+    width: 300px;
+    margin: 0 5em;
+  }
 }
 
 img {
@@ -116,7 +139,7 @@ img {
   border: 1px solid #ccc;
   cursor: pointer;
   font-size: 1.5em;
-  background-color: hsl(240, 83%, 60%);
+  background-color: hsl(217, 91%, 60%);
 }
 
 .controls button:hover {
