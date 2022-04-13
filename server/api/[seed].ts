@@ -61,7 +61,7 @@ export default defineHandler(async event => {
   const bird = randomChoice(birds, seed)
 
   return bird(
-    randomChoice(primaryColors, seed),
+    randomChoice(primaryColors, seed.toUpperCase()),
     randomChoice(secondaryColors, seed.at(-1)),
     randomChoice(outlineColors, seed.at(1)),
     randomChoice(bgColors, seed)
