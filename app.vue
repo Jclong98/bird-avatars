@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 const imageId = ref(nanoid())
 const imagePath = computed(() => `/api/bird/${imageId.value}`)
 const fullImagePath = computed(
-  () => `https://bird-avatar.netlify.app/api/bird/${imageId.value}`
+  () => `https://bird-avatars.netlify.app/api/bird/${imageId.value}`
 )
 </script>
 
