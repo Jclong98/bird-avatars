@@ -10,6 +10,7 @@
     "unocss": "^0.31.2"
   },
   "dependencies": {
-    "nanoid": "^3.3.2"
+    "nanoid": "^3.3.2",
+    "seedrandom": "^3.0.5"
   }
 }
