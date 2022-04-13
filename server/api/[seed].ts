@@ -56,7 +56,7 @@ const bgColors = [
 
 export default defineHandler(async event => {
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
-  const { seed } = event.context.params
+  const { seed }: { seed: string } = event.context.params
 
   const bird = randomChoice(birds, seed)
 
@@ -64,6 +64,6 @@ export default defineHandler(async event => {
     randomChoice(primaryColors, seed),
     randomChoice(secondaryColors, seed.at(-1)),
     randomChoice(outlineColors, seed.at(1)),
-    randomChoice(bgColors, seed.at(seed))
+    randomChoice(bgColors, seed)
   )
 })
