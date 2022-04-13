@@ -11,7 +11,4 @@ npm i
 ```
 npm run dev
 ```
-
-## Moving forward
-
-Implement seeded random
+m
