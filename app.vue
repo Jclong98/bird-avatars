@@ -21,7 +21,7 @@ const fullImagePath = computed(
       content="Generate a bird avatar to use as a profile picture or whatever else you like 🙂"
       property="og:description"
     />
-    <Meta content="/bird-1.svg" property="og:image" />
+    <Meta content="/bird-2.png" property="og:image" />
     <Meta content="#FF7043" data-react-helmet="true" name="theme-color" />
 
     <Title>Bird Avatar Generator</Title>
