@@ -11,4 +11,3 @@ npm i
 ```
 npm run dev
 ```
-m
