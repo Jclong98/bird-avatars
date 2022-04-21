@@ -10,7 +10,7 @@ const randomLetters = (length: number) => {
 const imageId = ref(randomLetters(3))
 const imagePath = computed(() => `/api/${imageId.value}`)
 const fullImagePath = computed(
-  () => `https://bird-avatars.netlify.app/api/${imageId.value}`
+  () => `bird-avatars.netlify.app/api/${imageId.value}`
 )
 </script>
 
