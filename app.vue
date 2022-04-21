@@ -29,9 +29,9 @@ const fullImagePath = computed(
     <Link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </Head>
 
-  <div class="min-h-screen bg-orange-200 grid place-items-center px-4">
+  <div class="min-h-screen bg-stone-200 grid place-items-center px-4">
     <main
-      class="relative bg-white text-orange-900 p-4 rounded-xl grid gap-4 w-full sm:w-prose relative pb-12 shadow-lg"
+      class="relative bg-white text-stone-900 p-4 rounded-xl grid gap-4 w-full sm:w-prose relative pb-12 shadow-lg"
     >
       <header class="text-center text-3xl font-bold">
         <h1>Bird Avatar Generator</h1>
@@ -45,7 +45,7 @@ const fullImagePath = computed(
 
       <div class="flex justify-center">
         <input
-          class="text-center p-4 rounded-xl w-full sm:w-90 bg-orange-100"
+          class="text-center p-4 rounded-xl w-full sm:w-90 bg-stone-100"
           type="text"
           tabindex="0"
           @focus="$event.target.select()"
@@ -55,7 +55,7 @@ const fullImagePath = computed(
 
       <div class="absolute inset-x-0 -bottom-8 flex justify-center">
         <button
-          class="text-2xl relative bg-orange-500 w-32 h-16 rounded-full overflow-auto cursor-pointer shadow hover:shadow-xl transition duration-200"
+          class="text-2xl relative bg-green-500 w-32 h-16 rounded-full overflow-auto cursor-pointer shadow hover:shadow-xl transition duration-200"
           @click="imageId = randomLetters(3)"
           title="randomize"
         >
@@ -64,10 +64,10 @@ const fullImagePath = computed(
       </div>
     </main>
 
-    <footer class="fixed bottom-1 inset-x-0 text-center text-orange-800">
+    <footer class="fixed bottom-1 inset-x-0 text-center text-stone-800">
       Created by
       <a
-        class="font-bold text-orange-600"
+        class="font-bold text-stone-600"
         href="https://github.com/jclong98/bird-avatars"
         >Jacob Long</a
       >
