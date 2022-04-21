@@ -1,5 +1,5 @@
 import { defineHandler, appendHeader } from 'h3'
-import seedrandom from 'seedrandom'
+import { randomChoice } from '~/assets/utils/randomChoice'
 
 import Bird1 from '~/assets/birds/Bird1'
 import Bird2 from '~/assets/birds/Bird2'
@@ -8,12 +8,6 @@ import Bird4 from '~/assets/birds/Bird4'
 import Bird5 from '~/assets/birds/Bird5'
 import Bird6 from '~/assets/birds/Bird6'
 import Bird7 from '~/assets/birds/Bird7'
-
-const randomChoice = (choices: any[], seed: string) => {
-  const rng = seedrandom(seed)
-  const index = Math.floor(rng() * choices.length)
-  return choices[index]
-}
 
 const birds = [Bird1, Bird2, Bird3, Bird4, Bird5, Bird6, Bird7]
 
@@ -54,7 +48,7 @@ const bgColors = [
   '#FFEDD5', // orange
 ]
 
-export default defineHandler(async event => {
+export default defineHandler(async (event) => {
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
   const { seed }: { seed: string } = event.context.params
 
