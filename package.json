@@ -7,9 +7,9 @@
     "test": "vitest -u"
   },
   "devDependencies": {
+    "@unocss/nuxt": "^0.31.8",
     "nuxt3": "latest",
     "supertest": "^6.2.2",
-    "unocss": "^0.31.2",
     "vitest": "^0.9.3"
   },
   "dependencies": {

@@ -29,125 +29,55 @@ const fullImagePath = computed(
     <Link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </Head>
 
-  <div class="centered">
-    <header>
-      <h1>Bird Avatar Generator</h1>
-    </header>
+  <div class="min-h-screen bg-orange-200 grid place-items-center px-4">
+    <main
+      class="relative bg-white text-orange-900 p-4 rounded-xl grid gap-4 w-full sm:w-prose relative pb-12 shadow-lg"
+    >
+      <header class="text-center text-3xl font-bold">
+        <h1>Bird Avatar Generator</h1>
+      </header>
 
-    <main class="main-card">
-      <div class="image-container">
-        <img :src="imagePath" :alt="`bird-${imageId}`" />
-      </div>
+      <img
+        class="w-full max-w-80 mx-auto rounded-full"
+        :src="imagePath"
+        :alt="`bird-${imageId}`"
+      />
 
-      <form class="controls" @submit.prevent>
+      <div class="flex justify-center">
         <input
+          class="text-center p-4 rounded-xl w-full sm:w-90 bg-orange-100"
           type="text"
           tabindex="0"
           @focus="$event.target.select()"
           :value="fullImagePath"
         />
-        <button @click="imageId = randomLetters(3)" title="randomize">
-          <span class="icon">🎲</span>
+      </div>
+
+      <div class="absolute inset-x-0 -bottom-8 flex justify-center">
+        <button
+          class="text-2xl relative bg-orange-500 w-32 h-16 rounded-full overflow-auto cursor-pointer shadow hover:shadow-xl transition duration-200"
+          @click="imageId = randomLetters(3)"
+          title="randomize"
+        >
+          🎲
         </button>
-      </form>
+      </div>
     </main>
 
-    <footer>
+    <footer class="fixed bottom-1 inset-x-0 text-center text-orange-800">
       Created by
-      <a href="https://github.com/jclong98/bird-avatars">Jacob Long</a>
+      <a
+        class="font-bold text-orange-600"
+        href="https://github.com/jclong98/bird-avatars"
+        >Jacob Long</a
+      >
     </footer>
   </div>
 </template>
 
 <style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html,
 body {
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
-  font-family: cursive;
-  background-color: hsl(214, 95%, 93%);
-  color: hsl(214, 95%, 20%);
-}
-
-.centered {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  text-align: center;
-}
-
-.main-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  padding: 2em;
-  margin: 1em;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.5);
-  flex: 1;
-}
-
-.image-container {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 768px) {
-  .image-container {
-    height: 300px;
-    width: 300px;
-    margin: 0 5em;
-  }
-}
-
-img {
-  width: 100%;
-}
-
-.controls {
-  width: 100%;
-  margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.controls input[type='text'] {
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  text-align: center;
-}
-
-.controls button {
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  font-size: 1.5em;
-  background-color: hsl(217, 91%, 60%);
-}
-
-.controls button:hover {
-  filter: brightness(1.1);
-}
-
-footer {
-  margin-top: 1em;
-  font-size: 0.8em;
+  height: 100%;
 }
 </style>
