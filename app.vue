@@ -52,7 +52,7 @@ const fullImagePath = computed(
       </header>
 
       <img
-        class="w-full max-w-80 mx-auto rounded-full"
+        class="w-full max-w-80 mx-auto rounded-full aspect-ratio-1/1 bg-stone-100"
         :src="imagePath"
         :alt="`bird-${imageId}`"
       />
