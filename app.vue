@@ -110,20 +110,20 @@ const themeColor = ref(randomChoice(themeColors))
     </main>
 
     <footer
-      class="sm:fixed bottom-0 p-2 w-full flex sm:justify-end justify-center"
+      class="sm:fixed bottom-0 p-2 flex flex-col justify-center"
       :class="`text-${themeColor}-800`"
     >
       <a
         href="https://github.com/jclong98/bird-avatars"
         :class="`text-${themeColor}-600`"
       >
-        Created by
-        <span class="font-bold">Jacob Long</span>
         <img
-          class="inline rounded-full h-8 w-8 mx-2"
+          class="rounded-full h-8 w-8 mx-auto"
           src="https://avatars.githubusercontent.com/u/36164786?s=48&v=4"
           alt="my github profile pic"
         />
+        Created by
+        <span class="font-bold">Jacob Long</span>
       </a>
     </footer>
   </div>
