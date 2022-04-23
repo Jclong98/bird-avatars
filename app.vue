@@ -45,7 +45,7 @@ const fullImagePath = computed(
 
   <div class="min-h-screen bg-stone-200 grid place-items-center px-4">
     <main
-      class="relative bg-white text-stone-900 p-4 rounded-xl grid gap-4 w-full sm:w-prose relative pb-12 shadow-lg mb-8"
+      class="relative bg-white text-stone-900 p-4 rounded-xl grid gap-4 w-full sm:w-prose relative pb-12 shadow-lg mb-10"
     >
       <header class="text-center text-3xl font-bold my-4">
         <h1>Bird Avatar Generator</h1>
@@ -78,7 +78,9 @@ const fullImagePath = computed(
       </div>
     </main>
 
-    <footer class="sm:fixed bottom-0 right-0 p-2 text-stone-800">
+    <footer
+      class="sm:fixed bottom-0 p-2 text-stone-800 w-full flex sm:justify-end justify-center"
+    >
       <a class="text-stone-600" href="https://github.com/jclong98/bird-avatars">
         Created by
 
