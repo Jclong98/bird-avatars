@@ -2,7 +2,7 @@
 
 I saw [this neat website](https://deno-avatar.deno.dev/) made with deno that generated a randomly colored avatar based on 4 svg files and wondered if I could do the same with nuxt.
 
-![](https://i.imgur.com/uElHMiH.png)
+![](https://i.imgur.com/sES6DL6.png)
 
 ## Getting started
 
