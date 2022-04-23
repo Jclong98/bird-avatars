@@ -1,6 +1,6 @@
 import seedrandom from 'seedrandom'
 
-export const randomChoice = (choices: any[], seed?: string) => {
+export function randomChoice<T>(choices: T[], seed?: string) {
   if (!seed) seed = Math.random().toString()
 
   const rng = seedrandom(seed)
