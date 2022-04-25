@@ -26,4 +26,10 @@ describe('bird endpoint', async () => {
     expect(response.status).toBe(200)
     expect(response.type).toBe('image/svg+xml')
   })
+
+  it('should return a png if given type=png', async () => {
+    const response = await request.get('/testSeed?type=png')
+    expect(response.status).toBe(200)
+    expect(response.type).toBe('image/png')
+  })
 })
