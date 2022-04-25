@@ -26,7 +26,7 @@ const imageId = computed({
   },
 })
 
-const imagePath = computed(() => `/api/${imageId.value}`)
+const imagePath = computed(() => `/api/${imageId.value}?type=png`)
 const fullImagePath = computed(
   () => `bird-avatars.netlify.app/api/${imageId.value}`
 )
