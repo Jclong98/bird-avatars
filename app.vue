@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ThemeRadio from '~/components/ThemeRadio.vue'
 import themeColors from '~/assets/themeColors'
-import { randomChoice } from '~/assets/utils/randomChoice'
 
 const route = useRoute() // used for page loading -- from nuxt
 const searchParams = useUrlSearchParams() // used for reactive search params in url bar -- from vueuse
