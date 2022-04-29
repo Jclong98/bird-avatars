@@ -30,7 +30,7 @@ const imagePath = computed(() => `/api/${imageId.value}`)
 const fullImagePath = computed(
   () => `bird-avatars.netlify.app/api/${imageId.value}`
 )
-const themeColor = ref(randomChoice(themeColors))
+const themeColor = ref('blue')
 </script>
 
 <template>
