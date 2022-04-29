@@ -21,7 +21,13 @@ const currentColor = computed({
       :key="color"
       @click="currentColor = color"
       @keydown.enter="currentColor = color"
-      class="w-8 h-8 rounded-full cursor-pointer active:scale-90 transition duration-200 shadow"
+      w="8"
+      h="8"
+      rounded="full"
+      cursor="pointer"
+      active="scale-90"
+      transition="duration-200"
+      shadow
       :class="[color === currentColor ? `bg-${color}-500` : `bg-${color}-200`]"
       :title="color + ' theme'"
     >
