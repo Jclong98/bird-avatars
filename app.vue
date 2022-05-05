@@ -27,7 +27,7 @@ const imageId = computed({
 
 const imagePath = computed(() => `/api/${imageId.value}`)
 const fullImagePath = computed(
-  () => `bird-avatars.netlify.app/api/${imageId.value}`
+  () => `bird-avatars.jacoblong.dev/api/${imageId.value}`
 )
 const themeColor = ref('blue')
 </script>
