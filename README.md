@@ -4,7 +4,7 @@
   <h1>Nuxt 3 Bird Avatars</h1>
   
   <p>
-    A fun bird generator loosely based on the bird desigs of Kurzgesagt 
+    A fun bird generator loosely based on the bird designs of Kurzgesagt 
   </p>
   
   
