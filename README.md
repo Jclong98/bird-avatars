@@ -127,4 +127,5 @@ This project is deployed on Netlify with server functions to handle the generati
 <!-- Acknowledgments -->
 ## :gem: Acknowledgements
 
+ - [hashrock](https://github.com/hashrock) for making [https://deno-avatar.deno.dev/](https://deno-avatar.deno.dev/)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
