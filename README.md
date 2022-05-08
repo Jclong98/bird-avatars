@@ -65,16 +65,6 @@
 
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
-
-
-<!-- Installation -->
-### :gear: Installation
-
-Install my-project with npm
-
-```bash
-  npm i
-```
    
 <!-- Running Tests -->
 ### :test_tube: Running Tests
