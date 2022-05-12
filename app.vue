@@ -106,15 +106,22 @@ const themeColor = ref('blue')
     >
       <a
         href="https://github.com/jclong98/bird-avatars"
-        class="text-center p-2 w-full"
+        class="text-center w-full inline-block font-bold"
         :class="`text-${themeColor}-600`"
       >
+        Source
+      </a>
+      <a
+        href="https://jacoblong.dev"
+        class="text-center w-full block mb-2"
+        :class="`text-${themeColor}-600`"
+      >
+        Created by <span class="font-bold">Jacob Long</span>
         <img
-          class="rounded-full h-8 w-8 mx-auto"
+          class="rounded-full h-8 w-8 inline-block ml-2"
           src="https://avatars.githubusercontent.com/u/36164786?s=48&v=4"
           alt="my github profile pic"
         />
-        <p>Created by <span class="font-bold">Jacob Long</span></p>
       </a>
     </footer>
   </div>
