@@ -48,18 +48,18 @@ const themeColor = ref('blue')
   </Head>
 
   <div
-    class="place-items-center px-4 grid min-h-screen"
+    class="grid min-h-screen place-items-center px-4"
     :class="`bg-${themeColor}-200`"
   >
     <main
-      class="grid gap-4 shadow-lg relative bg-white rounded-xl w-full p-4 pb-12 m-4 mb-10"
+      class="relative m-4 mb-10 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
       sm="w-prose"
       :class="`text-${themeColor}-900`"
     >
-      <header class="text-center text-3xl font-bold my-4">
+      <header class="my-4 text-center text-3xl font-bold">
         <h1>Bird Avatar Generator</h1>
         <ThemeRadio
-          class="pt-4 justify-center"
+          class="justify-center pt-4"
           sm="flex-col absolute top-0"
           v-model="themeColor"
           :items="themeColors"
@@ -67,7 +67,7 @@ const themeColor = ref('blue')
       </header>
 
       <img
-        class="w-full max-w-80 mx-auto rounded-full aspect-ratio-1"
+        class="max-w-80 aspect-ratio-1 mx-auto w-full rounded-full"
         :class="`bg-${themeColor}-100`"
         :src="imagePath"
         :alt="`bird-${imageId}`"
@@ -75,7 +75,7 @@ const themeColor = ref('blue')
 
       <div class="flex justify-center">
         <input
-          class="text-center p-4 rounded-xl w-full"
+          class="w-full rounded-xl p-4 text-center"
           sm="w-90"
           :class="`bg-${themeColor}-100`"
           type="text"
@@ -87,7 +87,7 @@ const themeColor = ref('blue')
 
       <div class="absolute inset-x-0 -bottom-8 flex justify-center">
         <button
-          class="flex justify-center items-center transition duration-200 cursor-pointer overflow-auto rounded-full w-32 h-16 relative text-3xl text-white"
+          class="relative flex h-16 w-32 cursor-pointer items-center justify-center overflow-auto rounded-full text-3xl text-white transition duration-200"
           hover="shadow-xl"
           active="scale-90"
           :class="`bg-${themeColor}-500`"
@@ -106,19 +106,19 @@ const themeColor = ref('blue')
     >
       <a
         href="https://github.com/jclong98/bird-avatars"
-        class="text-center w-full inline-block font-bold"
+        class="inline-block w-full text-center font-bold"
         :class="`text-${themeColor}-600`"
       >
         Source
       </a>
       <a
         href="https://jacoblong.dev"
-        class="text-center w-full block mb-2"
+        class="mb-2 block w-full text-center"
         :class="`text-${themeColor}-600`"
       >
         Created by <span class="font-bold">Jacob Long</span>
         <img
-          class="rounded-full h-8 w-8 inline-block ml-2"
+          class="ml-2 inline-block h-8 w-8 rounded-full"
           src="https://avatars.githubusercontent.com/u/36164786?s=48&v=4"
           alt="my github profile pic"
         />
