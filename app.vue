@@ -48,52 +48,35 @@ const themeColor = ref('blue')
   </Head>
 
   <div
-    place-items="center"
-    p="x-4"
-    grid
-    min-h-screen
+    class="place-items-center px-4 grid min-h-screen"
     :class="`bg-${themeColor}-200`"
   >
     <main
-      gap="4"
-      shadow="lg"
-      relative
-      grid
-      bg="white"
-      rounded="xl"
-      w="full sm:prose"
-      p="4 b-12"
-      m="4 b-10"
+      class="grid gap-4 shadow-lg relative bg-white rounded-xl w-full p-4 pb-12 m-4 mb-10"
+      sm="w-prose"
       :class="`text-${themeColor}-900`"
     >
-      <header text="center 3xl" font="bold" m="y-4">
+      <header class="text-center text-3xl font-bold my-4">
         <h1>Bird Avatar Generator</h1>
         <ThemeRadio
+          class="pt-4 justify-center"
           sm="flex-col absolute top-0"
-          p="t-4"
-          justify="center"
           v-model="themeColor"
           :items="themeColors"
         />
       </header>
 
       <img
-        w="full"
-        max-w="80"
-        m="x-auto"
-        rounded="full"
-        aspect-ratio="1"
+        class="w-full max-w-80 mx-auto rounded-full aspect-ratio-1"
         :class="`bg-${themeColor}-100`"
         :src="imagePath"
         :alt="`bird-${imageId}`"
       />
 
-      <div flex justify="center">
+      <div class="flex justify-center">
         <input
-          text="center"
-          p="4"
-          rounded="xl"
-          w="full sm:90"
+          class="text-center p-4 rounded-xl w-full"
+          sm="w-90"
           :class="`bg-${themeColor}-100`"
           type="text"
           tabindex="0"
@@ -102,21 +85,11 @@ const themeColor = ref('blue')
         />
       </div>
 
-      <div absolute inset-x="0" bottom="-8" flex justify="center">
+      <div class="absolute inset-x-0 -bottom-8 flex justify-center">
         <button
+          class="flex justify-center items-center transition duration-200 cursor-pointer overflow-auto rounded-full w-32 h-16 relative text-3xl text-white"
+          hover="shadow-xl"
           active="scale-90"
-          flex
-          justify-center
-          items-center
-          transition="duration-200"
-          shadow="hover:xl"
-          cursor="pointers"
-          overflow="auto"
-          rounded="full"
-          w="32"
-          h="16"
-          relative
-          text="3xl white"
           :class="`bg-${themeColor}-500`"
           @click="imageId = randomLetters(3)"
           title="randomize"
@@ -126,23 +99,22 @@ const themeColor = ref('blue')
       </div>
     </main>
 
-    <footer bottom="0" w="full" sm="fixed" :class="`text-${themeColor}-800`">
+    <footer
+      class="bottom-0 w-full"
+      :class="`text-${themeColor}-800`"
+      sm="fixed"
+    >
       <a
         href="https://github.com/jclong98/bird-avatars"
-        text="center"
-        p="2"
-        w="full"
+        class="text-center p-2 w-full"
         :class="`text-${themeColor}-600`"
       >
         <img
-          rounded="full"
-          h="8"
-          w="8"
-          mx="auto"
+          class="rounded-full h-8 w-8 mx-auto"
           src="https://avatars.githubusercontent.com/u/36164786?s=48&v=4"
           alt="my github profile pic"
         />
-        <p>Created by <span font="bold">Jacob Long</span></p>
+        <p>Created by <span class="font-bold">Jacob Long</span></p>
       </a>
     </footer>
   </div>
