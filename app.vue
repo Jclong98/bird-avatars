@@ -2,8 +2,8 @@
 import ThemeRadio from '~/components/ThemeRadio.vue'
 import themeColors from '~/assets/themeColors'
 
-const route = useRoute() // used for page loading -- from nuxt
-const searchParams = useUrlSearchParams() // used for reactive search params in url bar -- from vueuse
+const route = useRoute()
+const searchParams = useUrlSearchParams()
 
 const letters = 'abcdefghijklmnopqrstuvwxyz'
 const randomLetter = () => {
@@ -66,6 +66,7 @@ const themeColor = ref('blue')
         />
       </header>
 
+      <!-- main bird image display -->
       <img
         class="max-w-80 aspect-ratio-1 mx-auto w-full rounded-full"
         :class="`bg-${themeColor}-100`"
@@ -73,6 +74,7 @@ const themeColor = ref('blue')
         :alt="`bird-${imageId}`"
       />
 
+      <!-- input and bird location display -->
       <div class="flex justify-center">
         <input
           class="w-full rounded-xl p-4 text-center"
@@ -85,6 +87,7 @@ const themeColor = ref('blue')
         />
       </div>
 
+      <!-- randomize button -->
       <div class="absolute inset-x-0 -bottom-8 flex justify-center">
         <button
           class="relative flex h-16 w-32 cursor-pointer items-center justify-center overflow-auto rounded-full text-3xl text-white transition duration-200"
@@ -111,6 +114,7 @@ const themeColor = ref('blue')
       >
         Source
       </a>
+
       <a
         href="https://jacoblong.dev"
         class="mb-2 block w-full text-center"
