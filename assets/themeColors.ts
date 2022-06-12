@@ -1,1 +1,3 @@
-export default ['red', 'green', 'blue', 'orange', 'stone', 'purple']
+const themeColors = ['red', 'green', 'blue', 'orange', 'stone', 'purple']
+
+export default themeColors

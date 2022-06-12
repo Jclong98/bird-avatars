@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import themeColors from '~/assets/themeColors'
+
 const props = defineProps<{
   modelValue: string
-  items: string[]
 }>()
 
 const emit = defineEmits<{
@@ -18,7 +19,7 @@ const currentColor = computed({
   <div class="flex gap-2">
     <label
       tabindex="0"
-      v-for="color in items"
+      v-for="color in themeColors"
       :key="color"
       @click="currentColor = color"
       @keydown.enter="currentColor = color"
