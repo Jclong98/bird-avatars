@@ -24,6 +24,8 @@ const themeColor = useThemeColor()
   >
     <BirdGenerator />
 
+    <SavedBirds />
+
     <footer
       class="bottom-0 w-full"
       :class="`text-${themeColor}-800`"
