@@ -3,6 +3,7 @@ const props = defineProps<{
   modelValue: string
   items: string[]
 }>()
+
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
 }>()
@@ -21,13 +22,8 @@ const currentColor = computed({
       :key="color"
       @click="currentColor = color"
       @keydown.enter="currentColor = color"
-      w="8"
-      h="8"
-      rounded="full"
-      cursor="pointer"
+      class="h-8 w-8 cursor-pointer rounded-full shadow transition duration-200"
       active="scale-90"
-      transition="duration-200"
-      shadow
       :class="[color === currentColor ? `bg-${color}-500` : `bg-${color}-200`]"
       :title="color + ' theme'"
     >

@@ -126,10 +126,3 @@ const themeColor = ref('blue')
     </footer>
   </div>
 </template>
-
-<style>
-html,
-body {
-  height: 100%;
-}
-</style>
