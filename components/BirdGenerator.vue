@@ -23,12 +23,19 @@ const themeColor = useThemeColor()
     </header>
 
     <!-- main bird image display -->
-    <img
-      class="max-w-80 aspect-ratio-1 mx-auto w-full rounded-full"
-      :class="`bg-${themeColor}-100`"
-      :src="imagePath"
-      :alt="`bird-${imageId}`"
-    />
+    <div
+      class="aspect-ratio-1 w-50 relative mx-auto overflow-hidden rounded-full bg-gray-100 shadow-inner sm:w-80"
+    >
+      <Transition name="bird">
+        <img
+          class="absolute inline-block w-full rounded-full"
+          :class="`bg-${themeColor}-100`"
+          :src="imagePath"
+          :alt="`bird-${imageId}`"
+          :key="`${imageId}`"
+        />
+      </Transition>
+    </div>
 
     <!-- input and bird location display -->
     <div class="flex justify-center">
@@ -58,3 +65,18 @@ const themeColor = useThemeColor()
     </div>
   </main>
 </template>
+
+<style scoped>
+/* we will explain what these classes do next! */
+.bird-enter-active,
+.bird-leave-active {
+  transition: all 0.5s ease;
+}
+
+.bird-enter-from {
+  transform: translateY(100%);
+}
+.bird-leave-to {
+  transform: translateY(-100%);
+}
+</style>
