@@ -16,7 +16,7 @@ const themeColor = useThemeColor()
   </Head>
 
   <div
-    class="grid min-h-screen place-items-center gap-4 px-4"
+    class="grid min-h-screen place-items-center gap-4 px-4 transition duration-200"
     :class="`bg-${themeColor}-200`"
   >
     <BirdGenerator />
