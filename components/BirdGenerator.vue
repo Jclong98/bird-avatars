@@ -67,7 +67,6 @@ const themeColor = useThemeColor()
 </template>
 
 <style scoped>
-/* we will explain what these classes do next! */
 .bird-enter-active,
 .bird-leave-active {
   transition: all 0.5s ease;
