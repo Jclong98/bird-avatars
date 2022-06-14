@@ -13,11 +13,15 @@ export default function useBirdImage() {
   const searchParams = useUrlSearchParams()
 
   const imageId = computed({
-    get() {
+    get(): string {
       // first check if vueuse's search params are set
       // if not, use the route's params from the server
       // if that isn't set, use a random string
-      return searchParams.id ?? route.query.id ?? randomLetters(3)
+      return (
+        (searchParams.id as string) ??
+        (route.query.id as string) ??
+        randomLetters(3)
+      )
     },
     set(id: string) {
       searchParams.id = id

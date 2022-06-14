@@ -32,7 +32,7 @@ const themeColor = useThemeColor()
           :class="`bg-${themeColor}-100`"
           :src="imagePath"
           :alt="`bird-${imageId}`"
-          :key="`${imageId}`"
+          :key="imageId"
         />
       </Transition>
     </div>
