@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { imageId } = useBirdImage()
 const themeColor = useThemeColor()
 </script>
 
