@@ -1,6 +1,6 @@
 import { defineHandler, appendHeader, useQuery } from 'h3'
 import { randomChoice } from '~/assets/utils/randomChoice'
-// import sharp from 'sharp'
+import sharp from 'sharp'
 
 import Bird1 from '~/assets/birds/Bird1'
 import Bird2 from '~/assets/birds/Bird2'
@@ -50,7 +50,7 @@ const bgColors = [
 ]
 
 export default defineHandler(async (event) => {
-  // const query = await useQuery(event)
+  const query = await useQuery(event)
 
   const { seed }: { seed: string } = event.context.params
 
@@ -63,11 +63,10 @@ export default defineHandler(async (event) => {
     randomChoice(bgColors, seed)
   )
 
-  // TODO: Figure out how to convert to png without using sharp
-  // if (query.type === 'png') {
-  //   await appendHeader(event, 'Content-Type', 'image/png')
-  //   return sharp(Buffer.from(bird)).resize(512, 512).png().toBuffer()
-  // }
+  if (query.type === 'png') {
+    await appendHeader(event, 'Content-Type', 'image/png')
+    return sharp(Buffer.from(bird)).resize(512, 512).png().toBuffer()
+  }
 
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
   return bird
