@@ -13,8 +13,6 @@ const themeColor = useThemeColor()
     <Meta content="/bird-2.png" property="og:image" />
     <Meta content="#FF7043" data-react-helmet="true" name="theme-color" />
 
-    <Title>{{ imageId }} | Bird Avatar Generator</Title>
-
     <Link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </Head>
 
@@ -23,8 +21,6 @@ const themeColor = useThemeColor()
     :class="`bg-${themeColor}-200`"
   >
     <BirdGenerator />
-
-    <SavedBirds />
 
     <Footer />
   </div>

@@ -4,6 +4,10 @@ const themeColor = useThemeColor()
 </script>
 
 <template>
+  <Head>
+    <Title>{{ imageId }} | Bird Avatar Generator</Title>
+  </Head>
+
   <main
     class="relative m-4 mb-10 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
     sm="w-prose"
