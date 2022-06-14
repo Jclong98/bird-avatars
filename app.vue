@@ -10,7 +10,7 @@ const themeColor = useThemeColor()
       property="og:description"
     />
     <Meta content="/bird-2.png" property="og:image" />
-    <Meta content="#FF7043" data-react-helmet="true" name="theme-color" />
+    <Meta content="#3b82f6" data-react-helmet="true" name="theme-color" />
 
     <Link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </Head>
