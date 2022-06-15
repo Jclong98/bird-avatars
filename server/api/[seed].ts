@@ -1,6 +1,6 @@
 import { defineHandler, appendHeader, useQuery } from 'h3'
 import { randomChoice } from '~/assets/utils/randomChoice'
-import sharp from 'sharp'
+import { launch } from 'puppeteer'
 
 import Bird1 from '~/assets/birds/Bird1'
 import Bird2 from '~/assets/birds/Bird2'
@@ -64,8 +64,29 @@ export default defineHandler(async (event) => {
   )
 
   if (query.type === 'png') {
+    const browser = await launch()
+    const page = await browser.newPage()
+
+    await page.setViewport({ width: 500, height: 500 })
+    await page.setContent(`
+      <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      ${bird}
+    `)
+
+    const screenshot = await page.screenshot()
+    await browser.close()
+
     await appendHeader(event, 'Content-Type', 'image/png')
-    return sharp(Buffer.from(bird)).resize(512, 512).png().toBuffer()
+    return screenshot
   }
 
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
