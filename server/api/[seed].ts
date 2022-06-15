@@ -66,10 +66,10 @@ export default defineHandler(async (event) => {
   if (query.type === 'png') {
     await appendHeader(event, 'Content-Type', 'image/png')
     const image = await sharp(Buffer.from(bird))
-    const resized = await image.resize(512, 512)
-    const png = await resized.png()
-    const buffer = await png.toBuffer()
-    return buffer
+      .resize(512, 512)
+      .png()
+      .toBuffer()
+    return image
   }
 
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
