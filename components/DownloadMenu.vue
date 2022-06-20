@@ -40,10 +40,12 @@ const downLoadAsPng = async () => {
 <template>
   <div class="relative">
     <button
-      class="i-bi-download text-2xl"
       title="Downloads"
+      class="grid place-items-center rounded-full p-2"
       @click="open = !open"
-    ></button>
+    >
+      <i class="i-bi-download inline-block text-2xl"></i>
+    </button>
 
     <Transition name="menu">
       <div
