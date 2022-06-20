@@ -1,6 +1,5 @@
-import { defineHandler, appendHeader, useQuery } from 'h3'
+import { defineHandler, appendHeader } from 'h3'
 import { randomChoice } from '~/assets/utils/randomChoice'
-import sharp from 'sharp'
 
 import Bird1 from '~/assets/birds/Bird1'
 import Bird2 from '~/assets/birds/Bird2'
@@ -50,8 +49,6 @@ const bgColors = [
 ]
 
 export default defineHandler(async (event) => {
-  const query = await useQuery(event)
-
   const { seed }: { seed: string } = event.context.params
 
   const birdVariant = randomChoice(birds, seed)
@@ -62,15 +59,6 @@ export default defineHandler(async (event) => {
     randomChoice(outlineColors, seed[0]),
     randomChoice(bgColors, seed)
   )
-
-  if (query.type === 'png') {
-    await appendHeader(event, 'Content-Type', 'image/png')
-    const image = await sharp(Buffer.from(bird))
-      .resize(512, 512)
-      .png()
-      .toBuffer()
-    return image
-  }
 
   await appendHeader(event, 'Content-Type', 'image/svg+xml')
   return bird
