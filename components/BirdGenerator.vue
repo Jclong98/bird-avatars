@@ -23,18 +23,24 @@ const themeColor = useThemeColor()
     </header>
 
     <!-- main bird image display -->
-    <div
-      class="aspect-ratio-1 w-50 relative mx-auto overflow-hidden rounded-full bg-gray-100 shadow-inner sm:w-80"
-    >
-      <Transition name="bird">
-        <img
-          class="absolute inline-block w-full rounded-full"
-          :class="`bg-${themeColor}-100`"
-          :src="imagePath"
-          :alt="`bird-${imageId}`"
-          :key="imageId"
-        />
-      </Transition>
+    <div class="w-50 relative mx-auto sm:w-80">
+      <div class="absolute right-0 flex justify-between">
+        <DownloadMenu :id="imageId" />
+      </div>
+
+      <div
+        class="aspect-ratio-1 relative overflow-hidden rounded-full bg-gray-100 shadow-inner"
+      >
+        <Transition name="bird">
+          <img
+            class="absolute inline-block w-full rounded-full"
+            :class="`bg-${themeColor}-100`"
+            :src="imagePath"
+            :alt="`bird-${imageId}`"
+            :key="imageId"
+          />
+        </Transition>
+      </div>
     </div>
 
     <!-- input and bird location display -->
