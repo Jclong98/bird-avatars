@@ -23,8 +23,8 @@ const themeColor = useThemeColor()
     </header>
 
     <!-- main bird image display -->
-    <div class="w-50 relative mx-auto sm:w-80">
-      <div class="absolute right-0 flex justify-between">
+    <div class="w-70% relative mx-auto sm:w-80">
+      <div class="absolute right-0 z-10 flex justify-between">
         <DownloadMenu :id="imageId" />
       </div>
 

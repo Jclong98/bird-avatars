@@ -2,6 +2,10 @@
 const props = defineProps<{ id: string }>()
 
 const open = ref(false)
+const togglebutton = ref()
+onClickOutside(togglebutton, () => {
+  open.value = false
+})
 
 const downLoadAsPng = async () => {
   // bird comes in as blob with type svg
@@ -40,8 +44,9 @@ const downLoadAsPng = async () => {
 <template>
   <div class="relative">
     <button
+      ref="togglebutton"
       title="Downloads"
-      class="grid place-items-center rounded-full p-2"
+      class="grid place-items-center rounded-full bg-white p-2 transition duration-200 hover:bg-gray-100 hover:shadow-lg"
       @click="open = !open"
     >
       <i class="i-bi-download inline-block text-2xl"></i>
