@@ -17,7 +17,6 @@
     "vitest": "^0.9.3"
   },
   "dependencies": {
-    "@types/sharp": "^0.30.4",
     "@vueuse/core": "^8.3.1",
     "@vueuse/nuxt": "^8.3.1",
     "seedrandom": "^3.0.5"
