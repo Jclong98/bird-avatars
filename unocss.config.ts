@@ -2,14 +2,14 @@ import {
   defineConfig,
   presetUno,
   presetIcons,
-  presetAttributify,
   transformerDirectives,
+  transformerVariantGroup,
 } from 'unocss'
 import themeColors from './assets/themeColors'
 
 export default defineConfig({
-  presets: [presetUno(), presetIcons(), presetAttributify()],
-  transformers: [transformerDirectives()],
+  presets: [presetUno(), presetIcons()],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [
     ...themeColors.map((color) => `bg-${color}-100`),
     ...themeColors.map((color) => `bg-${color}-200`),

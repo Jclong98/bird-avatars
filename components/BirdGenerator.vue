@@ -9,15 +9,13 @@ const themeColor = useThemeColor()
   </Head>
 
   <main
-    class="relative m-4 mb-10 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
-    sm="w-prose"
+    class="sm:w-prose relative m-4 mb-10 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
     :class="`text-${themeColor}-900`"
   >
     <header class="my-4 text-center text-3xl font-bold">
       <h1>Bird Avatar Generator</h1>
       <ThemeRadio
-        class="justify-center pt-4"
-        sm="flex-col absolute top-0"
+        class="sm:(flex-col top-0) absolute justify-center pt-4"
         v-model="themeColor"
       />
     </header>
@@ -46,8 +44,7 @@ const themeColor = useThemeColor()
     <!-- input and bird location display -->
     <div class="flex justify-center">
       <input
-        class="w-full rounded-xl p-4 text-center"
-        sm="w-90"
+        class="sm:w-90 w-full rounded-xl p-4 text-center"
         :class="`bg-${themeColor}-100`"
         type="text"
         tabindex="0"
