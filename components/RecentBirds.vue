@@ -1,12 +1,6 @@
 <script setup lang="ts">
 const themeColor = useThemeColor()
 const { history } = useBirds()
-
-const historyStorage = useStorage<string[]>('bird-history', [])
-
-onMounted(() => {
-  history.value = historyStorage.value
-})
 </script>
 
 <template>

@@ -34,6 +34,11 @@ export default function useBirds() {
   )
 
   const history = useState('bird-history', () => [])
+  const historyStorage = useStorage<string[]>('bird-history', [])
+
+  onMounted(() => {
+    history.value = historyStorage.value
+  })
 
   const randomize = () => {
     history.value.push({ id: imageId.value, timeStamp: Date.now() })
