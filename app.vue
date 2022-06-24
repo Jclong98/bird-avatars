@@ -22,7 +22,7 @@ const themeColor = useThemeColor()
     <div class="grid gap-4 py-8">
       <BirdGenerator />
 
-      <RecentBirds />
+      <RecentBirds class="mb-4" />
 
       <Footer />
     </div>
