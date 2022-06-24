@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { imageId, fullImagePath, imagePath, randomize } = useBirdImage()
+const { imageId, fullImagePath, imagePath, randomize } = useBirds()
 const themeColor = useThemeColor()
 </script>
 
@@ -9,7 +9,7 @@ const themeColor = useThemeColor()
   </Head>
 
   <main
-    class="sm:w-prose relative m-4 mb-10 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
+    class="sm:w-prose relative mb-8 grid w-full gap-4 rounded-xl bg-white p-4 pb-12 shadow-lg"
     :class="`text-${themeColor}-900`"
   >
     <header class="my-4 text-center text-3xl font-bold">

@@ -3,7 +3,7 @@ const themeColor = useThemeColor()
 </script>
 
 <template>
-  <footer class="bottom-0 w-full sm:fixed" :class="`text-${themeColor}-800`">
+  <footer :class="`text-${themeColor}-800`">
     <a
       href="https://github.com/jclong98/bird-avatars"
       class="inline-block w-full text-center font-bold"

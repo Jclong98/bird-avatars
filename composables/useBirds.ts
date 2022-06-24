@@ -8,7 +8,7 @@ const randomLetters = (length: number) => {
   return Array.from({ length }, () => randomLetter()).join('')
 }
 
-export default function useBirdImage() {
+export default function useBirds() {
   const route = useRoute()
   const searchParams = useUrlSearchParams()
 
@@ -33,7 +33,13 @@ export default function useBirdImage() {
     () => `bird-avatars.jacoblong.dev/api/${imageId.value}`
   )
 
+  const history = useState('bird-history', () => [])
+
   const randomize = () => {
+    history.value.push(imageId.value)
+    if (history.value.length > 5) {
+      history.value.shift()
+    }
     imageId.value = randomLetters(3)
   }
 
@@ -42,5 +48,6 @@ export default function useBirdImage() {
     imagePath,
     fullImagePath,
     randomize,
+    history,
   }
 }

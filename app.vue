@@ -19,8 +19,18 @@ const themeColor = useThemeColor()
     class="grid min-h-screen place-items-center gap-4 px-4 transition duration-200"
     :class="`bg-${themeColor}-200`"
   >
-    <BirdGenerator />
+    <div class="grid gap-4 py-8">
+      <BirdGenerator />
 
-    <Footer />
+      <RecentBirds />
+
+      <Footer />
+    </div>
   </div>
 </template>
+
+<style>
+/* * {
+  outline: 1px solid tomato;
+} */
+</style>
