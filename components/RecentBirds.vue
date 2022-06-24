@@ -15,8 +15,8 @@ onMounted(() => {
     <div class="grid w-full grid-cols-5 items-center gap-4 overflow-hidden">
       <TransitionGroup>
         <a
-          v-for="id in history"
-          :key="id"
+          v-for="{ id, timeStamp } in history"
+          :key="`${id} + ${timeStamp}`"
           :href="`/?id=${id}`"
           class="flex flex-col gap-2"
         >

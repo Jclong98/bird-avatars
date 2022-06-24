@@ -36,7 +36,7 @@ export default function useBirds() {
   const history = useState('bird-history', () => [])
 
   const randomize = () => {
-    history.value.push(imageId.value)
+    history.value.push({ id: imageId.value, timeStamp: Date.now() })
     if (history.value.length > 5) {
       history.value.shift()
     }
