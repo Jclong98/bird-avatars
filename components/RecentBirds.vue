@@ -33,6 +33,13 @@ onMounted(() => {
           </h3>
         </a>
       </TransitionGroup>
+
+      <p
+        class="col-span-full text-center text-gray-600"
+        v-if="history.length === 0"
+      >
+        Try hitting the randomize button to generate a new bird.
+      </p>
     </div>
   </div>
 </template>
