@@ -11,7 +11,12 @@ onMounted(() => {
 
 <template>
   <div class="sm:w-prose rounded-xl bg-white p-4 shadow-lg">
-    <h2 class="mb-4 text-center text-2xl font-semibold">Recent Birds</h2>
+    <h2
+      class="mb-4 text-center text-2xl font-semibold"
+      :class="`text-${themeColor}-800`"
+    >
+      Recent Birds
+    </h2>
     <div class="grid w-full grid-cols-5 items-center gap-4 overflow-hidden">
       <TransitionGroup>
         <a
