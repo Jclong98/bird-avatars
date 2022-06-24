@@ -56,7 +56,7 @@ const themeColor = useThemeColor()
     <!-- randomize button -->
     <div class="absolute inset-x-0 -bottom-8 flex justify-center">
       <button
-        class="relative flex h-16 w-32 cursor-pointer items-center justify-center overflow-auto rounded-full text-3xl text-white transition duration-200"
+        class="relative flex h-16 w-32 cursor-pointer items-center justify-center overflow-auto rounded-full text-3xl text-white transition duration-200 active:scale-90"
         hover="shadow-xl"
         active="scale-90"
         :class="`bg-${themeColor}-500`"
