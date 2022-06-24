@@ -15,7 +15,7 @@ const themeColor = useThemeColor()
     <header class="my-4 text-center text-3xl font-bold">
       <h1>Bird Avatar Generator</h1>
       <ThemeRadio
-        class="sm:(flex-col top-0) absolute justify-center pt-4"
+        class="sm:(flex-col absolute) top-0 justify-center pt-4"
         v-model="themeColor"
       />
     </header>
